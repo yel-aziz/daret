@@ -3,14 +3,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../../lib/supabaseClient';
 
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { email, password } = req.body;
-=======
-export default function handler(req:any, res:any) {
-  if(req.method ==='GET'){
->>>>>>> 41b5bd21aa3368d693957866f6d822c81b7984bf
+
+
 
     if (!email || !password) {
       return res.status(400).json({ error: 'Email and password are required' });
